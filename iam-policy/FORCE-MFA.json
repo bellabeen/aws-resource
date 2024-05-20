@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "iam:DeactivateMFADevice",
+                "iam:DeleteVirtualMFADevice",
+                "iam:EnableMFADevice",
+                "iam:ResyncMFADevice",
+                "iam:CreateVirtualMFADevice",
+                "iam:ListMFADevices",
+                "iam:ListMFADeviceTags"
+            ],
+            "Resource": [
+                "arn:aws:iam::account-number:mfa/*",
+                "arn:aws:iam::account-number:user/*"
+            ]
+        },
+        {
+            "Sid": "VisualEditor1",
+            "Effect": "Allow",
+            "Action": "iam:ListVirtualMFADevices",
+            "Resource": "*"
+        }
+    ]
+}
